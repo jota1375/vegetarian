@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Productos</title>
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+      <!-- jQuery library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+      <!-- Popper JS -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  
+      <!-- Latest compiled JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    
+    <div class="container mt-5">
+            <h1 class="text-center mb-3">Listado de Productos</h1>
+            <a href="guardar.html" class="btn btn-success mt-3 mb-3">Nuevo Producto</a>
+            <table class="table table-striped text-center">              
+                <thead>
+                    <tr>
+                        <th>
+                            #
+                        </th>
+                        <th>
+                            Referencia
+                        </th>
+                        <th>
+                            Marca
+                        </th>
+                        <th>
+                            Categoría
+                        </th>
+                        <th>
+                            Descripción
+                        </th>
+                        <th>
+                            Disponibilidad 
+                        </th>
+                        <th>
+                            Precio
+                        </th>
+                        <th>
+                            Cantidad en stock 
+                        </th>
+                        <th>
+                            Fotografía 
+                        </th>
+                        <th>
+                            Acción
+                        </th>
+                    </tr>  
+                </thead>
+                <tbody id="tbody">                    
+
+                </tbody>
+
+            </table>
+
+    </div>
+
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <div class="modal-body">
+            <div id="alerta" class="alert alert-info alert-dismissible fade show">
+                <button type="button" class="close" >&times;</button>
+                <strong>Mensaje</strong> <span id="mensaje"></span>
+            </div>
+             
+            <h1 class="text-center mb-4">Editar Producto</h1>
+            <label><strong>Id Referencia</strong></label>
+            <input type="text" id="id_ref" class="form-control mb-3">
+            <label><strong>Marca</strong></label>
+            <input type="text" id="marca" class="form-control mb-3" >
+            <label><strong>Categoría</strong></label>
+            <input type="text" id="categoria" class="form-control mb-3" >
+            <label><strong>Descripción</strong></label>
+            <input type="text" id="descripcion" class="form-control mb-3" >
+            <label><strong>Disponibilidad </strong></label>
+            <input type="number" id="d" class="form-control mb-3" >
+            <div class="form-group">
+                <label><strong>Disponibilidad </strong></label><br>
+                <select name="availabilityProd" id="availabilityProd" class="form-control" required>
+                    <option selected value="">Selecciona disponibilidad</option>
+                    <option value="disponible">Disponible</option>
+                    <option value="noDisponible">No disponible</option>
+                </select>
+            </div>
+            <label><strong>Precio</strong></label>
+            <input type="number" id="precio" class="form-control mb-3" >
+            <label><strong>Cantidad en stock</strong></label>
+            <input type="number" id="stock" class="form-control mb-3" >
+            <label><strong>Fotografía </strong></label>
+            <input type="text" id="fotografía" class="form-control mb-3" >
+        
+            <button id="guardar" class="btn btn-primary btn-block">Guardar</button>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+  
+
+    <script src="js/crud.js"></script>
+</body>
+</html>

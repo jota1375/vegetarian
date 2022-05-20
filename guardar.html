@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardar Productos</title>
+     <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+     <!-- jQuery library -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 
+     <!-- Popper JS -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ 
+     <!-- Latest compiled JavaScript -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 
+</head>
+<body>
+  
+   <div class="container mt-5">
+        <div class="jumbotron">
+           <div id="alerta" class="alert alert-info alert-dismissible fade show">
+                <button type="button" class="close" >&times;</button>
+                <strong>Mensaje</strong> <span id="mensaje"></span>
+            </div>
+            <a href="producto.html" class="btn btn-success mt-3 mb-3">Listar Productos</a>       
+            <h1 class="text-center mb-4">Registro Productos Vegetarianos </h1>
+             <label><strong>Id Referencia</strong></label>
+            <input type="text" id="id_ref" class="form-control mb-3">
+            <label><strong>Marca</strong></label>
+            <input type="text" id="marca" class="form-control mb-3" >
+            <label><strong>Categoría</strong></label>
+            <input type="text" id="categoria" class="form-control mb-3" >
+            <label><strong>Descripción</strong></label>
+            <input type="text" id="descripcion" class="form-control mb-3" >
+            <label><strong>Disponibilidad </strong></label>
+            <input type="number" id="d" class="form-control mb-3" >
+            <div class="form-group">
+                <label><strong>Disponibilidad </strong></label><br>
+                <select name="availabilityProd" id="availabilityProd" class="form-control" required>
+                    <option selected value="">Selecciona disponibilidad</option>
+                    <option value="disponible">Disponible</option>
+                    <option value="noDisponible">No disponible</option>
+                </select>
+            </div>
+            <label><strong>Precio</strong></label>
+            <input type="number" id="precio" class="form-control mb-3" >
+            <label><strong>Cantidad en stock</strong></label>
+            <input type="number" id="stock" class="form-control mb-3" >
+            <label><strong>Fotografía </strong></label>
+            <input type="text" id="fotografía" class="form-control mb-3" >
+                    <button id="guardar" class="btn btn-primary btn-block">Guardar</button>
+            <p id="salida"></p>
+        </div>
+
+        <script src="/js/guardar.js"></script>
+    </div>
+   
+
+    
+</body>
+</html>
